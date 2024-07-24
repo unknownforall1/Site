@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Search</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #282c34;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        form {
+            text-align: center;
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            width: 300px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form action="{{ url_for('search') }}" method="post">
+        <input type="text" name="query" placeholder="Search for a song" required>
+        <input type="submit" value="Search">
+    </form>
+</body>
+</html>
